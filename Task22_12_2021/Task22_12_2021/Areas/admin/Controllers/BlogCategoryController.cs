@@ -1,18 +1,54 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using Task22_12_2021.Data;
+using Task22_12_2021.Models;
 
 namespace Task22_12_2021.Areas.admin.Controllers
 {
+    [Area("admin")]
     public class BlogCategoryController : Controller
     {
-        [Area("admin")]
+        private readonly AppDbContext _context;
+
+        public BlogCategoryController(AppDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            return View();
+            return View(_context.Categories.ToList());
         }
+
 
         public IActionResult Create()
         {
             return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Category model)
+        {
+            _context.Categories.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        
+
+
+
+        public IActionResult Update(int id)
+        {
+            return View(_context.Categories.Find(id));
+        }
+
+        [HttpPost]
+        public IActionResult Update(Category model)
+        {
+            _context.Categories.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
