@@ -10,7 +10,7 @@ using Task22_12_2021.Data;
 namespace Task22_12_2021.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211223204704_init")]
+    [Migration("20211227184954_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

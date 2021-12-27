@@ -26,7 +26,7 @@ namespace Task22_12_2021
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("RepairCS")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("RepairDBCS")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
