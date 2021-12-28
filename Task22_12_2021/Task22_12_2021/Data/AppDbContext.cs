@@ -25,6 +25,6 @@ namespace Task22_12_2021.Data
         public DbSet<Success> Successes { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<TagToBlog> TagToBlogs { get; set; }
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
     }
 }

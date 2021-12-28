@@ -34,7 +34,7 @@
                             <td><img src="~/Upload/@item.Image" alt="Alternate Text" style="max-width:120px; max-height:120px"/></td>
                             <td>@item.Title</td>
                             <td>@item.Category.Name</td>
-                            <td>@item.User.Name</td>
+                            @*<td>@item.User.Name</td>*@
                             <td>@(item.Content.Length>40? item.Content.Substring(0,40)+"...": item.Content)</td>
                             <td>@item.CreateDate.ToString("dd.MM.yyyy HH:mm")</td>
                             <td>

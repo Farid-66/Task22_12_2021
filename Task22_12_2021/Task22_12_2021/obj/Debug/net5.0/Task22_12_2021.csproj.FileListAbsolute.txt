@@ -159,3 +159,16 @@ C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task2
 C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Razor\Areas\admin\Views\Blog\Index.cshtml.g.cs
 C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Razor\Areas\admin\Views\Blog\Create.cshtml.g.cs
 C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Razor\Areas\admin\Views\Blog\Update.cshtml.g.cs
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Login.cshtml.g.cs
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Register.cshtml.g.cs
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Task22_12_2021.StaticWebAssets.xml
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\Task22_12_2021.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\obj\Debug\net5.0\staticwebassets\Task22_12_2021.StaticWebAssets.xml

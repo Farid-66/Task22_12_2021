@@ -20,10 +20,10 @@ namespace Task22_12_2021.Areas.admin.Controllers
             _context = context;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
-        {
-            return View(_context.Blogs.Include(u => u.User).Include(c => c.Category).ToList());
-        }
+        //public IActionResult Index()
+        //{
+        //    return View(_context.Blogs.Include(u => u.User).Include(c => c.Category).ToList());
+        //}
 
         public IActionResult Create()
         {
@@ -44,7 +44,7 @@ namespace Task22_12_2021.Areas.admin.Controllers
 
             model.Image = fileName;
             model.CreateDate = DateTime.Now;
-            model.UserID = 1;
+            //model.UserID = 1;
             _context.Blogs.Add(model);
             _context.SaveChanges();
             

@@ -22,16 +22,16 @@ namespace Task22_12_2021.Models
         [Column(TypeName ="ntext")]
         public string Content { get; set; }
 
-        [ForeignKey("User")]
-        public int UserID { get; set; }
-
-        public User User { get; set; }
+        [ForeignKey("CustomUser")]
+        public string CustomUserId { get; set; }
+        public CustomUser CustomUser { get; set; }
 
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }
+        [NotMapped]
+        public int[] TagsId { get; set; }
         public List<TagToBlog> TagToBlogs { get; set; }
-
         public DateTime CreateDate { get; set; }
 
 

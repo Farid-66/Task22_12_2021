@@ -16,7 +16,7 @@ namespace Task22_12_2021.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.13")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Task22_12_2021.Models.About", b =>
@@ -75,6 +75,9 @@ namespace Task22_12_2021.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CustomUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Image")
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
@@ -83,14 +86,11 @@ namespace Task22_12_2021.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("CategoryID");
 
-                    b.HasIndex("UserID");
+                    b.HasIndex("CustomUserId");
 
                     b.ToTable("Blogs");
                 });
@@ -182,6 +182,73 @@ namespace Task22_12_2021.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("Task22_12_2021.Models.CustomUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CustomUser");
+                });
+
             modelBuilder.Entity("Task22_12_2021.Models.Feedback", b =>
                 {
                     b.Property<int>("ID")
@@ -193,16 +260,16 @@ namespace Task22_12_2021.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("CustomUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Title")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("UserID");
+                    b.HasIndex("CustomUserId");
 
                     b.ToTable("Feedbacks");
                 });
@@ -399,37 +466,6 @@ namespace Task22_12_2021.Migrations
                     b.ToTable("TagToBlogs");
                 });
 
-            modelBuilder.Entity("Task22_12_2021.Models.User", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Photo")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Surname")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Users");
-                });
-
             modelBuilder.Entity("Task22_12_2021.Models.Blog", b =>
                 {
                     b.HasOne("Task22_12_2021.Models.Category", "Category")
@@ -438,15 +474,13 @@ namespace Task22_12_2021.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Task22_12_2021.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Task22_12_2021.Models.CustomUser", "CustomUser")
+                        .WithMany("Blogs")
+                        .HasForeignKey("CustomUserId");
 
                     b.Navigation("Category");
 
-                    b.Navigation("User");
+                    b.Navigation("CustomUser");
                 });
 
             modelBuilder.Entity("Task22_12_2021.Models.Comments", b =>
@@ -468,13 +502,11 @@ namespace Task22_12_2021.Migrations
 
             modelBuilder.Entity("Task22_12_2021.Models.Feedback", b =>
                 {
-                    b.HasOne("Task22_12_2021.Models.User", "User")
+                    b.HasOne("Task22_12_2021.Models.CustomUser", "CustomUser")
                         .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CustomUserId");
 
-                    b.Navigation("User");
+                    b.Navigation("CustomUser");
                 });
 
             modelBuilder.Entity("Task22_12_2021.Models.TagToBlog", b =>
@@ -499,6 +531,11 @@ namespace Task22_12_2021.Migrations
             modelBuilder.Entity("Task22_12_2021.Models.Blog", b =>
                 {
                     b.Navigation("TagToBlogs");
+                });
+
+            modelBuilder.Entity("Task22_12_2021.Models.CustomUser", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("Task22_12_2021.Models.Tag", b =>
