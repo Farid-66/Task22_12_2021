@@ -26,8 +26,22 @@ using Task22_12_2021.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\Areas\admin\Views\_ViewImports.cshtml"
+using Task22_12_2021.ViewModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\Areas\admin\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e2085dc38f161fe095e9835681e8a512f42c3c42", @"/Areas/admin/Views/BlogCategory/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"63b4503ada069e815953b787bdbbd4c8c39a640e", @"/Areas/admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3e265c4712b25cb76b61a033d6e3fdf4e2fcff2a", @"/Areas/admin/Views/_ViewImports.cshtml")]
     public class Areas_admin_Views_BlogCategory_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Category>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -73,7 +87,7 @@ using Task22_12_2021.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-12 my-5\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c426628", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c427115", async() => {
                 WriteLiteral("<i class=\"fas fa-plus\"></i>");
             }
             );
@@ -140,7 +154,7 @@ using Task22_12_2021.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                            <td>\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c4210102", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c4210589", async() => {
                 WriteLiteral("<i class=\"far fa-edit\"></i>");
             }
             );
@@ -176,7 +190,7 @@ using Task22_12_2021.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c4212915", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2085dc38f161fe095e9835681e8a512f42c3c4213402", async() => {
                 WriteLiteral("<i class=\"far fa-trash-alt\"></i>");
             }
             );

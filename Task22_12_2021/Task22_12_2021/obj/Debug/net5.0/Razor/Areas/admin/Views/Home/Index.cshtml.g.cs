@@ -26,8 +26,22 @@ using Task22_12_2021.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\Areas\admin\Views\_ViewImports.cshtml"
+using Task22_12_2021.ViewModel;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\HDD\CodeAcademy\Back-end\Task22_12_2021\Task22_12_2021\Task22_12_2021\Areas\admin\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0c47abf36ee5a86ba74fe56fac819fc15a6f9499", @"/Areas/admin/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"63b4503ada069e815953b787bdbbd4c8c39a640e", @"/Areas/admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3e265c4712b25cb76b61a033d6e3fdf4e2fcff2a", @"/Areas/admin/Views/_ViewImports.cshtml")]
     public class Areas_admin_Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
